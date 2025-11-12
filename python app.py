@@ -18,7 +18,12 @@ def tc(valor3,valorrrr):
 @app.route('/divisão/<valor4>/<valorrrrr>')
 def hc(valor4,valorrrrr):
     divisão = f"{valor4 / valorrrrr}"
-    return f'o {valor4}com o {valorrrrr} deu a divisão{divisão}'
+    if valor4 == 0:
+        print ("coloque um numero valido")
+    elif valorrrrr == 0:
+        print("coloque um numero valido")
+    else:
+        return f'o {valor4}com o {valorrrrr} deu a divisão{divisão}'
 
 
 if __name__ =="__main__":
